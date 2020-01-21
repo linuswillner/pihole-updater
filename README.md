@@ -12,19 +12,15 @@ A tiny script I built to automatically keep Pi-hole updated on my Raspberry Pi.
 ```bash
 git clone https://github.com/linuswillner/pihole-updater.git
 cd pihole-updater
-chmod +x pihole-update-logprep.sh
-chmod +x pihole-update-gravity.sh
-chmod +x pihole-update-full.sh
+chmod +x *.sh
+./pihole-update-logprep.sh
 ```
+
+It's important you run `pihole-update-logprep.sh` to create the logging directory for the updates (`/var/log/pihole-updater`) with appropriate permissions.
+
 ## Prerequisites
 
 [Exim4](https://wiki.debian.org/Exim) must be properly set up the server if email notifications need to be sent to external hosts (`sudo dpkg-reconfigure exim4-config` > Internet).
-
-The log directory needs to be created before running the scripts below.
-
-```bash
-./pihole-update-logprep.sh
-```
 
 Edit `PIHOLE_UPDATER_EMAIL` to define the email to which to send update success and failure notifications.
 
