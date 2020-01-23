@@ -26,4 +26,4 @@ Edit `PIHOLE_UPDATER_EMAIL` to define the email to which to send update success 
 
 ## Usage
 
-You can set these scripts to run in [cron](http://man7.org/linux/man-pages/man5/crontab.5.html) at any time you see fit (`crontab -e`).
+You can set these scripts to run in [cron](http://man7.org/linux/man-pages/man5/crontab.5.html) at any time you see fit (`crontab -e`). If using cron, you will have to set the `PATH` variable either per-script or for the entire crontab to match the system environment. See https://askubuntu.com/a/23438 for more information.

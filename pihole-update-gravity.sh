@@ -3,6 +3,9 @@
 
 set -e
 
+# Change working directory to installdir
+cd "$(dirname "${BASH_SOURCE[0]}")"
+
 EMAIL=$(cat PIHOLE_UPDATER_EMAIL | xargs)
 LOG_FILE="/var/log/pihole-updater/gravity-update_$(date +%Y-%m-%d-%H-%M-%S).log"
 
